@@ -124,7 +124,7 @@ describe("system-agent transcript store", () => {
   });
 
   it("round-trips typed wizard-action presentation metadata", async () => {
-    await withTempDir({ prefix: "openclaw-system-agent-transcript-action-" }, async (stateDir) => {
+    await withTestDir({ prefix: "openclaw-system-agent-transcript-action-" }, async (stateDir) => {
       const env = { ...process.env, OPENCLAW_STATE_DIR: stateDir };
       appendTranscriptTurn(
         {
